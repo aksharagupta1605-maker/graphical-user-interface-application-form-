@@ -1,0 +1,55 @@
+#package-already written codes in python.
+#tk inter
+import tkinter as tk
+from tkinter import ttk           #combo box import  import calendar
+from tkcalendar  import Calendar,DateEntry
+from tkinter import messagebox
+def show ():
+    messagebox.showinfo("status","record save")
+window=tk.Tk()
+window.wm_geometry("600x600")
+window.title("this is my 1st GUI programme")
+window.configure(bg="light yellow")
+l1=tk.Label(window,text="application form",bg=("light yellow"))
+l1.grid(row=10,column =250)
+l2=tk.Label(window,text="candidate's name",bg=("light yellow"))
+l2.grid(row=20,column=50)
+e1=tk.Entry(window)
+e1.grid(row=20,column=100)
+l3=tk.Label(window,text="parentage",bg=("light yellow"))
+l3.grid(row=35,column=50)
+e1=tk.Entry(window)
+e1.grid(row=35,column=100)
+l4=tk.Label(window,text="category",bg=("light yellow"))
+l4.grid(row=50,column=50)
+e1=ttk.Combobox(window,values=["st","sc","general","obc"])
+e1.grid(row=50,column=100)
+l5=tk.Label(window,text="nationality",bg=("light yellow"))
+l5.grid(row=65,column=50)
+e1=tk.Entry(window)
+e1.grid(row=65,column=100)
+l6=tk.Label(window,text="date of birth",bg=("light yellow"))
+l6.grid(row=80,column=50)
+c=DateEntry(window)
+c.grid(row=80,column=100)
+l7=tk.Label(window,text="gender",bg=("light yellow"))
+l7.grid(row=95,column=50)
+r1=tk.Radiobutton(window,text="male",value=1,bg=("light yellow"))        #can select only one option
+r2=tk.Radiobutton(window,text="female",value=2,bg=("light yellow"))
+r3=tk.Radiobutton(window,text="others",value=3,bg=("light yellow"))
+r1.grid(row=95,column=100)
+r2.grid(row=95,column=130)
+r3.grid(row=95,column=160)
+l8=tk.Label(window,text="hobbies",bg=("light yellow"))
+l8.grid(row=110,column=50)
+r1=tk.Checkbutton(window,text="reading",bg=("light yellow"))          # can select all options
+r2=tk.Checkbutton(window,text="coding",bg=("light yellow"))
+r3=tk.Checkbutton(window,text="writing",bg=("light yellow"))
+r1.grid(row=110,column=100)
+r2.grid(row=110,column=130)
+r3.grid(row=110,column=160)
+b1=tk.Button(window,text="ok",command=show)
+b1.grid(row=130,column=50)
+b2=tk.Button(window,text="cancel",command=exit)
+b2.grid(row=130,column=100)
+window.mainloop()        #last line of the code
